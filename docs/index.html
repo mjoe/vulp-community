@@ -140,6 +140,29 @@
       margin: 0 0 12px;
     }
     .support strong { display: block; margin-bottom: 4px; }
+    .coming-soon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 24px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      background: linear-gradient(to right, rgba(53, 208, 164, 0.07), rgba(53, 208, 164, 0.14), rgba(53, 208, 164, 0.07));
+      border-bottom: 1px solid #1a312a;
+    }
+    .badge {
+      background: rgba(53, 208, 164, 0.14);
+      color: var(--accent);
+      border: 1px solid rgba(53, 208, 164, 0.35);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
     footer {
       padding: 34px 0 48px;
       border-top: 1px solid #1a312a;
@@ -155,6 +178,10 @@
   </style>
 </head>
 <body>
+  <div class="coming-soon">
+    <span class="badge">Coming soon</span>
+    Vulp will be available on the Mac App Store shortly.
+  </div>
   <header>
     <div class="brand">
       <img src="assets/vulp.png" alt="Vulp icon">
