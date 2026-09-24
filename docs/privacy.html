@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1412">
+
+  <title>Privacy Policy · Vulp</title>
+  <meta name="description" content="Vulp privacy policy: how your data is handled — local playback, optional iCloud sync, recordings, StoreKit purchases, and radio directory lookups.">
+  <link rel="canonical" href="https://mjoe.github.io/vulp-community/privacy.html">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" href="assets/vulp.png">
+
+  <style>
+    :root {
+      --bg: #0b1412;
+      --panel: #12251e;
+      --text: #eaf0ec;
+      --muted: #93a59c;
+      --accent: #35d0a4;
+      --code-bg: #070d0b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+      background: rgba(11, 20, 18, 0.9);
+    }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; }
+    .brand img { width: 28px; height: 28px; border-radius: 6px; }
+    nav a { margin-left: 18px; color: var(--muted); font-size: 0.95rem; }
+    nav a:hover { color: var(--text); text-decoration: none; }
+    main { padding: 56px 0 24px; }
+    h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; }
+    .updated { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+    h2 { font-size: 1.3rem; margin-top: 32px; }
+    p, li { color: #cfd7d4; }
+    li { margin-bottom: 8px; }
+    footer {
+      padding: 34px 0 48px;
+      border-top: 1px solid #1a312a;
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    footer p { margin: 6px 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="assets/vulp.png" alt="Vulp icon">
+      <span>Vulp</span>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="https://github.com/mjoe/vulp-community/issues">Issues</a>
+      <a href="https://github.com/mjoe/vulp-community/discussions">Discussions</a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: September 24, 2026</p>
+
+    <p>Vulp is designed to keep your data on your own devices. This policy describes what information the app handles and where it goes.</p>
+
+    <h2>Streams &amp; settings</h2>
+    <p>Your stream library, favorites, and app preferences are stored locally on your Mac in the app's UserDefaults. They never leave your device unless you opt in to Cloud Sync.</p>
+
+    <h2>Cloud Sync (optional)</h2>
+    <p>If you enable Cloud Sync, your stream library is synchronized through your personal iCloud account, so it is available on your other devices. This is the same iCloud backing store Apple provides to the app — Vulp has no separate server.</p>
+
+    <h2>Recordings</h2>
+    <p>Recordings are saved locally to a folder you choose (by default <code>~/Music/Vulp/</code>). They are not uploaded anywhere.</p>
+
+    <h2>Radio directory &amp; artwork</h2>
+    <p>When you use the built-in radio search, Vulp queries the public <a href="https://www.radio-browser.info/">radio-browser.info</a> directory, so your search terms are sent to that service. When you play a station or add a favorite, Vulp may fetch the station's logo and metadata from the station's own domain. No analytics or ad trackers are involved.</p>
+
+    <h2>Widget</h2>
+    <p>To power the home-screen widget, Vulp writes the currently playing track's title and artwork into a local App Group container on your device. This information never leaves your Mac.</p>
+
+    <h2>Purchases &amp; subscriptions</h2>
+    <p>Subscriptions are handled entirely by Apple's App Store and StoreKit. Vulp only receives your entitlement status (subscribed or not) to enable features; it never sees your payment details.</p>
+
+    <h2>What we don't do</h2>
+    <ul>
+      <li>No analytics or telemetry.</li>
+      <li>No third-party advertising or tracking.</li>
+      <li>No selling or sharing of personal data.</li>
+      <li>No accounts — Vulp never asks you to create one with us.</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy can be raised in the <a href="https://github.com/mjoe/vulp-community/issues">issue tracker</a> or via <a href="https://github.com/mjoe/vulp-community/discussions">GitHub Discussions</a>.</p>
+  </main>
+
+  <footer>
+    <p><a href="index.html">Back to the Vulp home page</a></p>
+  </footer>
+</body>
+</html>
