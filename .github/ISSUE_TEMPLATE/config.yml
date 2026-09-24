@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions & discussions
+    url: https://github.com/mjoe/vulp-community/discussions
+    about: Ask questions or chat informally about Vulp.
+  - name: Vulp support & ticketing
+    url: https://github.com/mjoe/vulp-community/issues
+    about: All tickets are tracked as GitHub issues in this repository.
