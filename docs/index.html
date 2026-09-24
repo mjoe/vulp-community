@@ -84,18 +84,16 @@
     a:hover { text-decoration: underline; }
     .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
     header {
-      position: relative;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 18px 24px;
       background: rgba(11, 20, 18, 0.9);
     }
-    .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; position: relative; z-index: 1; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; }
     .brand img { width: 28px; height: 28px; border-radius: 6px; }
     nav a { margin-left: 18px; color: var(--muted); font-size: 0.95rem; }
     nav a:hover { color: var(--text); text-decoration: none; }
-    nav { position: relative; z-index: 1; }
     .hero { padding: 72px 0 56px; text-align: center; }
     .hero img { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4); }
     h1 { font-size: 2.2rem; line-height: 1.2; margin: 22px 0 14px; }
@@ -142,32 +140,48 @@
       margin: 0 0 12px;
     }
     .support strong { display: block; margin-bottom: 4px; }
-    .coming-soon {
+    .overlay-banner {
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
-      bottom: 0;
+      height: min(54vh, 420px);
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      color: var(--muted);
-      font-size: 0.88rem;
-      opacity: 0.85;
+      gap: 14px;
+      color: var(--text);
+      background: rgba(11, 20, 18, 0.68);
+      -webkit-backdrop-filter: blur(16px) saturate(1.2);
+      backdrop-filter: blur(16px) saturate(1.2);
+      border-bottom: 1px solid rgba(53, 208, 164, 0.25);
+      z-index: 50;
       pointer-events: none;
     }
     .badge {
-      background: rgba(53, 208, 164, 0.14);
+      background: rgba(53, 208, 164, 0.16);
       color: var(--accent);
-      border: 1px solid rgba(53, 208, 164, 0.35);
-      font-size: 0.72rem;
+      border: 1px solid rgba(53, 208, 164, 0.4);
+      font-size: 0.85rem;
       font-weight: 700;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      padding: 3px 10px;
+      padding: 6px 18px;
       border-radius: 999px;
       white-space: nowrap;
+    }
+    .overlay-title {
+      margin: 0;
+      font-size: clamp(1.9rem, 4.6vw, 3.3rem);
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      text-align: center;
+    }
+    .overlay-sub {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
     }
     footer {
       padding: 34px 0 48px;
@@ -178,7 +192,9 @@
     }
     footer p { margin: 6px 0; }
     @media (max-width: 700px) {
-      .coming-soon { display: none; }
+      .overlay-banner { height: 40vh; min-height: 240px; }
+      .overlay-title { font-size: 1.6rem; }
+      .overlay-sub { font-size: 0.9rem; padding: 0 24px; }
     }
     @media (max-width: 560px) {
       nav a { margin-left: 10px; font-size: 0.85rem; }
@@ -187,9 +203,10 @@
   </style>
 </head>
 <body>
-  <div class="coming-soon">
+  <div class="overlay-banner">
     <span class="badge">Coming soon</span>
-    Vulp will be available on the Mac App Store shortly.
+    <p class="overlay-title">Vulp is coming to the Mac App Store</p>
+    <p class="overlay-sub">Stay tuned — we're almost there.</p>
   </div>
   <header>
     <div class="brand">
