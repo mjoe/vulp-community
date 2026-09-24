@@ -143,11 +143,10 @@
     .overlay-banner {
       position: absolute;
       top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: min(88%, 620px);
-      padding: 36px 44px;
-      border-radius: 18px;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      padding: 44px 24px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -155,11 +154,11 @@
       gap: 14px;
       text-align: center;
       color: var(--text);
-      background: rgba(16, 30, 25, 0.86);
-      -webkit-backdrop-filter: blur(18px) saturate(1.2);
-      backdrop-filter: blur(18px) saturate(1.2);
-      border: 1px solid rgba(53, 208, 164, 0.25);
-      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+      background: rgba(11, 20, 18, 0.68);
+      -webkit-backdrop-filter: blur(16px) saturate(1.2);
+      backdrop-filter: blur(16px) saturate(1.2);
+      border-top: 1px solid rgba(53, 208, 164, 0.25);
+      border-bottom: 1px solid rgba(53, 208, 164, 0.25);
       z-index: 50;
       pointer-events: none;
     }
@@ -177,7 +176,7 @@
     }
     .overlay-title {
       margin: 0;
-      font-size: clamp(1.6rem, 3.8vw, 2.8rem);
+      font-size: clamp(1.8rem, 4.2vw, 3rem);
       font-weight: 700;
       letter-spacing: -0.01em;
     }
@@ -195,7 +194,7 @@
     }
     footer p { margin: 6px 0; }
     @media (max-width: 700px) {
-      .overlay-banner { padding: 26px 22px; }
+      .overlay-banner { padding: 28px 18px; }
       .overlay-title { font-size: 1.5rem; }
       .overlay-sub { font-size: 0.9rem; }
     }
